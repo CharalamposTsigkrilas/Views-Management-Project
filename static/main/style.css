@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+nav {
+    background: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: cyan;
+}
+
+.nav-left a {
+    margin-left: 0;
+}
+
+/* 🔹 Κεντρικό content */
+.content-wrapper {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;  /* οριζόντια */
+    align-items: center;      /* κάθετα */
+}
+
+.content {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
