@@ -13,17 +13,23 @@
         <a href="{% url 'home' %}">🏠 Home</a>
     </div>
 
-    <div class="nav-right">
-        <a href="{% url 'page1' %}">App 1</a>
-        <a href="{% url 'page2' %}">App 2</a>
-        <a href="{% url 'page3' %}">App 3</a>
-    </div>
+    {% if user.is_authenticated %}
+        <div class="nav-right">
+            <a href="{% url 'page1' %}">App 1</a>
+            <a href="{% url 'page2' %}">App 2</a>
+            <a href="{% url 'page3' %}">App 3</a>
+            <a href="{% url 'logout' %}">➜] Έξοδος</a>
+        </div>
+    {% else %}
+        <div class="nav-left">
+            <a href="{% url 'login' %}">🔐 Σύνδεση</a>
+        </div>
+    {% endif %}
 </nav>
 
 <div class="content-wrapper">
     <div class="content">
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
     </div>
 </div>
 

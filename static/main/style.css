@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -28,7 +31,7 @@ nav a:hover {
 
 /* 🔹 Κεντρικό content */
 .content-wrapper {
-    min-height: 500px;
+    flex: 1;
     display: flex;
     justify-content: center;  /* οριζόντια */
     align-items: center;      /* κάθετα */
@@ -39,4 +42,78 @@ nav a:hover {
     max-width: 800px;
     padding: 20px;
     text-align: center;
+}
+
+
+/* =========================
+   Auth Forms (Login / Signup)
+   ========================= */
+
+.auth-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card h2 {
+    margin-bottom: 20px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.auth-form button {
+    padding: 12px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-form button:hover {
+    background: #555;
+}
+
+.auth-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.auth-link a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+.auth-error {
+    background: #ffe6e6;
+    color: #cc0000;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
 }

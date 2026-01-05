@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="auth-card">
+    <h2>Εγγραφή</h2>
+
+    {% if error %}
+        <div class="auth-error">{{ error }}</div>
+    {% endif %}
+
+    <form method="post" class="auth-form">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button type="submit">Εγγραφή</button>
+    </form>
+
+    <div class="auth-link">
+        Έχεις ήδη λογαριασμό;
+        <a href="{% url 'login' %}">Σύνδεση</a>
+    </div>
+</div>
+{% endblock %}
